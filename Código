@@ -5,3 +5,9 @@ f=f/max(max(f));
 f=imresize(f,0.25); 
 figure(1)
 imshow(f,[]); %Muestra la imagen 
+
+%%%Dilatation
+se = strel('disk',5);
+BW2 = imdilate(f,se);
+imshow(BW2), title('dilated')
+% Use different disk size
