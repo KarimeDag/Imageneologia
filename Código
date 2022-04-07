@@ -1,0 +1,7 @@
+
+f=imread('radiograph1.jpg');  %Lee la imagen de  nuestro dipositivo
+f=double(f(:,:,1)); 
+f=f/max(max(f));
+f=imresize(f,0.25); 
+figure(1)
+imshow(f,[]); %Muestra la imagen 
